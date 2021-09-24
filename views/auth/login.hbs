@@ -1,0 +1,33 @@
+{{! views/auth/login }}
+<div class="mb-3 row"></div>
+
+  <h2>Iniciar sesión</h2>
+ <br>
+  <form action="/auth/login" method="POST">
+    <h2>Email</h2>
+    <div class="mb-3">
+    <input type="email" class="form-control"  name="email" placeholder="dianaegc@gmail.com" />
+</div>
+
+<div class="mb-3">
+    <h2>Password</h2>
+    <label for="exampleFormControlTextarea1" class="form-label"></label>
+    <input type="password" class="form-control"name="password" rows="3"placeholder="holamundo" />
+</div>
+<br>
+<div>
+ <button type="submit" class="btn-outline-info">
+      Iniciar sesión
+    </button>
+</div>
+   
+
+
+    {{#if errorMessage}}
+      <p style="color: red">{{errorMessage}}</p>
+    {{/if}}
+
+  </form>
+
+</div>
+
